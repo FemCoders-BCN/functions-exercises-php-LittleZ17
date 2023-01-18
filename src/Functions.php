@@ -60,7 +60,8 @@ class Functions
 
     function eachWordToArray($string)
     {
-        $array = explode(" ", $string);
+        $space = " ";
+        $array = explode($space, $string);
         return $array;
     }
 
@@ -101,11 +102,12 @@ class Functions
     //Escribe tu código aquí...
     function updateItem($arrayDado)
     {
+        $strToFind = "pastelito";
+        $strChange ="tarta";
         $newarray = [];
         $newarray = $arrayDado;
-        $index = array_search("pastelito", $newarray);
-        // unset($arrayDado[$index]);
-        $newarray[$index] = "tarta";
+        $index = array_search($strToFind, $newarray);
+        $newarray[$index] = $strChange;
         return $newarray;
     }
 
@@ -115,9 +117,10 @@ class Functions
     //Escribe tu código aquí...
 
     function deleteItem($arrayDado){
+        $strDelete = "helado";
         $newarray = [];
         $newarray = $arrayDado;
-        $index = array_search("helado", $newarray);
+        $index = array_search($strDelete, $newarray);
         array_splice($newarray, $index, 1);
         return $newarray;
     }
