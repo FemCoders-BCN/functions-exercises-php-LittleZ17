@@ -35,6 +35,7 @@ class Store
 
     function rateByPrice($num)
     {
+
         if ($num >= 0 && $num <= 50) {
             return '€';
         }
